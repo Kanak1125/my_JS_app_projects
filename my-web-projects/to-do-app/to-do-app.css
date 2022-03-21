@@ -1,0 +1,20 @@
+div {
+    margin-left: 511px;
+ }
+
+div.users-input {
+    margin-left: 344px;
+    border: 2px solid black;
+    border-radius: 11px;
+    padding: 10px;
+    text-align: center;
+    width: 15cm;
+}
+
+input {
+    background: rgb(157, 244, 255);
+    border: 1px solid rgb(37, 163, 212);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+}
