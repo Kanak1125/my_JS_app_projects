@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Note-taker app\note-taker.css">
+</head>
+<body>
+    <div class="modal_container">
+        <div class="modal">
+            <button class="modal-btn">&times;</button>
+            <h2 class="modal_title"> </h2>
+            <p class="modal_body"> 
+            </p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <p class="heading"> Note Taker</p>
+        <p class="subheading"> Add A New Note: </p>
+        <div class="notes-content">
+            <div>
+                <label for="title">Title: </label>
+            <input type="text" id="title" placeholder="Enter the title">
+            </div>
+            <div class = "notes-body">
+                <p> Note: </p>
+                <textarea id="textbox" cols = "30" placeholder="Write your note here"></textarea>
+            </div>
+        </div>   
+        <button id="btn" class="btn">Add Note</button>
+    </div>
+    <div class = "no-notes"> No notes added yet! </div>
+    <div class="note-container"></div>
+    <script src="Note-taker app\note-taker.js"></script>
+</body>
+</html>

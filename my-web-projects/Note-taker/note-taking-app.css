@@ -1,0 +1,118 @@
+body {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/*@media screen and (min-with: 100px) {
+    body {
+        text-align: center;
+    }  
+}*/
+
+h3 {
+    margin-top: 73px;
+    color: mediumseagreen;
+}
+
+textarea {
+    width: 700px;
+    height: 100px;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 5px;
+}
+
+.add-btn {
+    background: mediumseagreen;
+    width: 100px;
+    height: 33px;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    margin-bottom: 35px;
+}
+
+.add-btn:hover {
+    background: rgb(44, 133, 84);
+}
+
+#notes-table {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+#style-a {
+    border: 1px solid rgb(78, 125, 143);
+    padding: 10px;
+    width: 133px;
+    word-wrap: break-word;
+    height: 170px; 
+    overflow: hidden;
+    user-select: none;
+    color: black;
+    cursor: pointer;
+}
+
+.modal-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    /* display: none;     */
+}
+
+ .modal {
+    position: relative;
+    background: white;
+    width: 800px;
+    height: 900px;
+    margin: auto;
+    top: 10px;
+    overflow: auto;
+}
+
+.modal_title {
+    font-size: 2 rem;
+    line-height: 1.2;
+    margin-bottom: 1 rem;
+    max-width: 85%;
+}
+
+.modal_btn {
+    position: inherit;
+    float: right;
+    background: white;
+    font-size: 2.5rem;  
+    cursor: pointer; 
+    transition: 0.3s linear;
+}
+
+.modal_btn:hover {
+    color: red;
+}
+
+/*
+.close:hover {
+    text-decoration: none;  
+    border: 1px solid red;
+    background: red;  
+}
+
+.popup:target {
+    display: block;
+}
+
+/* TO BE EDITED
+.my-pop {
+    width: 300px;
+    height: 300px;
+    transition: width 2s;
+}*/
+
+/*#table-data {
+    border: 1px black;
+}*/
