@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --border-radius: 5px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+textarea {
+    max-width: 85%;
+    resize: none;
+}
+
+button {
+    place-self: center;
+    background-color: #218938;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    border: 3px solid #93cea2;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0f7c27;
+    box-shadow: 0px 1px 5px #218938;
+}
+
+button:active {
+    box-shadow: 1px 3px 10px #218938;
+}
