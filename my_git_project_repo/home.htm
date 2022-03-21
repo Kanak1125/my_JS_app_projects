@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!--CSS-->
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap%27');
         * {
@@ -25,7 +27,7 @@
             /* --toggle-color: #ddd; */
             --text-color: #707070;
             --border-radius: 5px;
-            --transition: all 300ms linear;
+            --transition: all 400ms linear;
             --box-shadow: 1px 1px 5px #695cfe,
                         -1px -1px 5px #695cfe;
         }
@@ -62,20 +64,25 @@
         .top-left {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            margin-left: 20px;
         }
         .dropdown {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            display: none;
         } 
+        .display {      /*to display the dropdown option when the search input field is focused */
+            display: block;
+            position: absolute;
+            margin-top: -37px;
+            margin-left: 235px;
+            z-index: 1;
+        }
         input {
-            width: 100%;
-            height: 30px;
+            width: 200%;
+            height: 40px;
             background-color: var(--primary-color-light);
             border: none;
             padding: 10px;
-            border-radius: var(--border-radius);
+            border-radius: 25px;
         } 
         ::placeholder {
             color: var(--primary-color);
@@ -87,14 +94,18 @@
             transition: var(--transition);
         }
         select {
+            height: 35px;
+            width: auto;
             border: none;
+            border-radius:  25px;
             background-color: var(--primary-color-light);
-            border-radius: var(--border-radius);
             color: var(--text-color);
+            padding: 0px 10px;
         }
         select:focus {
             outline: none !important;
-            box-shadow: var(--box-shadow);
+            /* box-shadow: var(--box-shadow); */
+            transition: var(--transition);
         }
         .body-content {
             grid-row: 3/6;
@@ -103,12 +114,6 @@
             padding: 1em;
             padding-left: 2em;
             grid-row-gap: 5em;
-            /* grid-template-areas: "main main main"
-                                 "btn ";
-             */
-            /* flex-direction: column;
-            align-items: center;
-            justify-content: center; */
         }
         .intro {
             grid-column: 1/3;
@@ -139,17 +144,19 @@
             cursor: pointer;
         }
         .btn:hover{
-            box-shadow: 1px 1px 1em #695cfe,
-                        -1px -1px 1em #695cfe;
+            color: var(--sidebar-color);
+            background-color: var(--primary-color);
             transition: var(--transition);
         }
     </style>
 </head>
+
+<!--HTML body-->
 <body>
     <section class="wrapper">
         <div class = "linkers">
             <div class="logo">
-                <img src="img\project_stream_logo" alt="logo">
+                <img src="img/project_stream_logo.png" alt="logo">
             </div>
             <nav class="nav-bar">
                 <a href="#">Movies</a>
@@ -161,18 +168,17 @@
                 <div class="form">
                     <form action="/sign-in" method="post">
                         <!-- {% csrf_token %}     -->
-                        <input type="text" placeholder="&#xF002; Search" style = "font-family:Arial, FontAwesome" />    
+                        <input type="text" placeholder="&#xF002; Search" style = "font-family:Arial, FontAwesome" onclick = "displayChoice()"/>    
                     </form>
-                </div>
-                <div class="dropdown">
-                    <label for="choose"> Choose an option</label>
-                <select>
-                    <option value="">Ascending</option>
-                    <option value="">Descending</option>
-                    <option value="">Time</option>
-                </select>
-                </div>
-            </div>
+                    <div id = "my-dropdown" class="dropdown">
+                        <select>
+                            <option value="">Ascending</option>
+                            <option value="">Descending</option>
+                            <option value="">Time</option>
+                        </select>
+                    </div>
+               </div>
+           </div>
         </div>
         <div class="body-content">
             <div class="intro">
@@ -185,5 +191,15 @@
             </div>
         </div>
     </section>
+
+    <!--Javascript-->
+    <script>
+        const myDropdown = document.getElementById('my-dropdown');      // gets the element of id('ny-dropdown') and stores the element on myDropdown constant.
+
+        /* function to display selection option for dropdowns on click event*/
+        function displayChoice() {
+        myDropdown.classList.add('display');        //adds class of '.display' to the div with id of 'my-dropdown' when the 'search' input field is clicked..
+        }   
+    </script>
 </body>
 </html>
