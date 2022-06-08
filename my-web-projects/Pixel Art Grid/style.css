@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+canvas {
+    border: 1px solid black;
+}
+.colors {
+    width: 250px;
+    height: 20px;
+    display: flex;
+}
+.color_box {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 300ms ease-in-out;
+}
+.color_active {
+    border: 3px inset white;
+}
+.tools {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.fas {
+    cursor: pointer;
+}
